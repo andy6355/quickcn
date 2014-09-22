@@ -1,0 +1,61 @@
+<ion-view title="域名注册" class="tabContent">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear button-light icon ion-ios7-email-outline"
+                ng-click="openInbox($event)"></button>
+    </ion-nav-buttons>
+    <ion-content scroll="false">
+        <div class="list inputDiv">
+            <form ng-submit="goSearch(searchText)">
+            <div class="item inputBoxDiv">
+                <label class="inputBoxLabel">
+                                       <input type="text" class="searchInput" placeholder="填写域名" ng-model="searchText" maxlength="54">
+                    
+                </label>
+                <select class="suffixSelect" disabled>
+                    <option selected>.cn</option>
+                    <option>.中国</option>
+                    <option>.公司</option>
+                    <option>.网络</option>
+                </select>
+            </div>
+            </form>
+            <div class="searchButtonDiv">
+                <a class="searchButton button button-block button-positive" on-tap="goSearch(searchText)">
+                    立即注册</a>
+            </div>
+        </div>
+        <ion-scroll ng-show="showView=='result'" zooming="false" direction="y" class="resultScroll">
+            <div class="list">
+
+                <div class="item item-button-right" ng-repeat="searchDomain in searchDomains">
+                    {{searchDomain.domain}}
+
+                    <button ng-if="searchDomain.isreg==true" ng-click="whois(searchDomain.domain)"
+                            class="button button-clear">
+                        <span class="regTipSpan">已注册</span>
+                        <i class="icon ion-search"></i>
+                    </button>
+                    <button ng-if="searchDomain.isreg==false" ng-disabled="searchDomain.isAdded"
+                            ng-click="addCart(searchDomain)" class="button button-clear">
+                        <i class="icon ion-ios7-plus-outline addIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </ion-scroll>
+        <div class="bar bar-footer voiceDiv" data-tap-disabled="true">
+            <a class="voiceButton" on-hold="null" on-touch="onTouch()" on-release="onRelease()"></a>
+        </div>
+        <div class="list card whoisDiv" ng-show="showView == 'whois'">
+            <div class="item item-avatar item-icon-left">
+                <i class="icon ion-chevron-left" ng-click="hideWhois()"></i>
+                <h2>{{whoisDomain}}</h2>
+                <p>whois 信息</p>
+            </div>
+            <div class="item item-body">
+                <ion-scroll zooming="false" direction="y" class="whoisInfoScroll">
+                    <p ng-repeat="line in whoisDomainInfo">{{line}}<br/></p>
+                </ion-scroll>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

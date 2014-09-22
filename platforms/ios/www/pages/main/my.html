@@ -1,0 +1,45 @@
+<ion-view title="我的域名" class="tabContent">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear button-light icon ion-ios7-barcode-outline"
+                ng-click="scanCode()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear button-light icon ion-ios7-email-outline"
+                ng-click="openInbox($event)"></button>
+    </ion-nav-buttons>
+    <ion-content scroll="false">
+        <div class="bar myBar" ng-show="isShowTip()">
+            <p class="title realTip">您尚未实名认证!</p>
+            <button class="button button-positive pull-right realTipRight icon icon-right ion-ios7-camera"
+                    ng-click="goRealname()">立即实名认证
+            </button>
+        </div>
+        <div class="list myInfoDiv">
+            <div class="item item-thumbnail-left">
+                <img id="myLogoImg" class="myLogoImg" ng-src="{{myPhoto}}" ng-click="goRealname()">
+
+                <div ng-show="my.isRealname" class="realnameFlag"><i class="icon ion-checkmark-round"></i></div>
+                <p>姓名：{{my.name}}</p>
+
+                <p>手机：{{my.phone}}</p>
+
+                <p>邮箱：{{my.email}}</p>
+            </div>
+        </div>
+
+
+        <div ng-show="myDomains.length > 0" class="card padding-vertical myDomainScroll">
+            <div class="item item-divider">
+                我的域名
+            </div>
+            <ion-scroll zooming="false" direction="y" class="myDomainItem">
+                <ion-item class="item-icon-right" ng-repeat="myDomain in myDomains"
+                          href="#/main/my/domain/{{myDomain.name}}">
+                    {{myDomain.name}}
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </ion-item>
+            </ion-scroll>
+        </div>
+    </ion-content>
+
+</ion-view>

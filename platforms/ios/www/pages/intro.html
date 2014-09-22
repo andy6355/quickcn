@@ -1,0 +1,39 @@
+<ion-view>
+    <!--<ion-nav-buttons side="left">-->
+    <!--<button class="button button-light button-clear no-animation icon ion-ios7-close-empty"-->
+    <!--ng-click="startApp()" ng-if="!slideIndex">-->
+    <!--跳过-->
+    <!--</button>-->
+    <!--<button class="button button-light button-clear no-animation icon ion-ios7-arrow-back"-->
+    <!--ng-click="previous()" ng-if="slideIndex > 0">-->
+    <!--上一步-->
+    <!--</button>-->
+    <!--</ion-nav-buttons>-->
+    <!--<ion-nav-buttons side="right">-->
+    <!--<button class="button button-light button-clear no-animation icon icon-right ion-ios7-arrow-forward"-->
+    <!--ng-click="next()" ng-if="slideIndex != 2">-->
+    <!--下一步-->
+    <!--</button>-->
+    <!--<button class="button button-light button-clear no-animation icon icon-right ion-ios7-paperplane-outline"-->
+    <!--ng-click="startApp()" ng-if="slideIndex == 2">-->
+    <!--开始-->
+    <!--</button>-->
+    <!--</ion-nav-buttons>-->
+    <ion-slide-box class="introSilde" on-slide-changed="slideChanged(index)">
+        <ion-slide>
+            <div class="introDiv">
+            </div>
+        </ion-slide>
+        <ion-slide>
+            <div class="introDiv">
+            </div>
+        </ion-slide>
+        <ion-slide>
+            <div class="introDiv">
+                <button class="button button-full button-small button-positive" style="margin: 0; bottom: 32px; position: absolute;"
+                        ng-click="startApp()">开始体验！
+                </button>
+            </div>
+        </ion-slide>
+    </ion-slide-box>
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view title="{{domainInfo.name}}" class="tabContent">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear button-light icon ion-ios7-email-outline"
+                ng-click="openInbox($event)"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list list-inset" style="background-color: rgba(255, 255, 255, 0.8)">
+            <label class="item item-input item-stacked-label domainItem">
+                <span class="input-label">注册年数</span>
+                <input type="text" placeholder="" readonly value="{{domainInfo.years}}">
+            </label>
+            <label class="item item-input item-stacked-label domainItem">
+                <span class="input-label">注册日期</span>
+                <input type="text" placeholder="" readonly value="{{domainInfo.regDate}}">
+            </label>
+        </div>
+        <div id="chart" class="chartDiv">
+        </div>
+    </ion-content>
+</ion-view>
+

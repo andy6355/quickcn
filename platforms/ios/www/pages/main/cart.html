@@ -1,0 +1,31 @@
+<ion-view title="购物车" class="tabContent">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear button-light icon ion-ios7-email-outline" ng-click="openInbox($event)"></button>
+    </ion-nav-buttons>
+    <ion-content scroll="false">
+        <ion-scroll zooming="false" direction="y" class="cartScroll">
+        <ion-list>
+            <ion-item class="item" ng-show="" ></ion-item>
+            <ion-item class="item item-checkbox item-icon-right" ng-repeat="cartItem in cartItems">
+                <label class="checkbox cartItem">
+                    <input type="checkbox" value="{{cartItem}}" ng-model="cartItem.isSelected" ng-change="selectedChange(cartItem)">
+                </label>
+                {{cartItem.name}}
+                <i class="icon ion-ios7-trash-outline" ng-click="deleteItem(cartItem)"></i>
+            </ion-item>
+        </ion-list>
+        </ion-scroll>
+
+        <div class="bar bar-footer cartBar">
+            <label class="checkbox">
+                <input type="checkbox" ng-model="allChecked" ng-click="checkAll()">
+            </label>
+            <p class="title realTip" style="margin-left: 50px !important" ng-show="cartItems.length == 0">购物车为空</p>
+            <button class="button pull-right icon-left ion-social-usd-outline button-assertive buttonPay" ng-disabled="selectedItemLength == 0"
+                    ng-click="orderDomains()">
+                去结算({{selectedItemLength}})
+            </button>
+        </div>
+
+    </ion-content>
+</ion-view>

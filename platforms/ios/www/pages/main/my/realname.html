@@ -1,0 +1,29 @@
+<ion-view title="实名认证" class="tabContent">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear button-light icon ion-ios7-email-outline"
+                ng-click="openInbox($event)"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list myInfoDiv">
+            <img class="captureImg" ng-src="{{myPhoto}}" ng-click="choosePhoto()">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">姓名</span>
+                <input type="text" placeholder="姓名" ng-model="my.name">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">身份证号</span>
+                <input type="text" placeholder="身份证号" ng-model="my.idcard">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">手机</span>
+                <input type="tel" placeholder="手机" ng-model="my.phone">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Email</span>
+                <input type="email" placeholder="Email" ng-model="my.email">
+            </label>
+        </div>
+        <button class="button button-block button-positive" ng-click="goRealName()" ng-disabled="!canSubmit()">实名认证</button>
+    </ion-content>
+
+</ion-view>

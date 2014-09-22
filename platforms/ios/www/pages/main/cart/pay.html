@@ -1,0 +1,54 @@
+<ion-view title="支付" class="tabContent">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear button-light icon ion-ios7-email-outline" ng-click="openInbox($event)"></button>
+    </ion-nav-buttons>
+    <ion-content scroll="false">
+        <ion-scroll zooming="false" direction="y" class="payScroll">
+        <ion-list>
+            <div class="item item-divider">您的订单</div>
+            <ion-item class="item item-icon-right payDivItem" ng-repeat="domain in order">
+                {{domain.name}}
+                <i class="icon" style="right: 0px;">
+                    <i class="icon ion-ios7-minus-outline item-icon-right miniIcon" ng-click="updateYears(domain, -1)" ng-disabled="domain.years <= 1"></i>
+                    <input type="text" class="yearText" readonly ng-bind="domain.years" value="{{domain.years}}年">
+                    <i class="icon ion-ios7-plus-outline miniIcon" ng-click="updateYears(domain, 1)" ng-disabled="domain.years >= 10"></i>
+                </i>
+            </ion-item>
+        </ion-list>
+        </ion-scroll>
+
+        <div class="card list paySelectDiv">
+            <div class="item item-divider">支付方式</div>
+            <label class="item item-radio">
+                <input type="radio" name="group">
+                <div class="item-content payItem">
+                    <img src="img/alipay.png" class="payIcon">
+                    支付宝
+                </div>
+                <i class="radio-icon ion-checkmark radioDef"></i>
+            </label>
+            <label class="item item-radio">
+                <input type="radio" name="group">
+                <div class="item-content payItem">
+                    <img src="img/weixin.png" class="payIcon">
+                    微信支付
+                </div>
+                <i class="radio-icon ion-checkmark radioDef"></i>
+            </label>
+            <label class="item item-radio">
+                <input type="radio" name="group">
+                <div class="item-content payItem">
+                    <img src="img/yinlian.png" class="payIcon">
+                    银联支付
+                </div>
+                <i class="radio-icon ion-checkmark radioDef"></i>
+            </label>
+        </div>
+        <div class="bar bar-footer cartBar">
+            <p class="padding"> 总计：{{totalMoney}}元</p>
+            <button class="button pull-right icon-left ion-social-usd-outline button-assertive buttonPay" ng-click="pay()">
+                确认支付
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

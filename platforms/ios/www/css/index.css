@@ -1,0 +1,352 @@
+
+html, body {
+    -webkit-touch-callout : none;
+    -webkit-user-select   : none;
+}
+
+.introDiv {
+    background-image    : url('../img/a.png');
+    background-size     : 100%;
+    background-position : top left;
+    height              : 100%;
+}
+
+h1.title {
+    font-size : 1.5em !important;
+}
+
+.bar.bar-positive.headerDiv {
+    background-color : #5EAEFB;
+    border-color     : #5EAEFB;
+    background-image : none;
+
+}
+
+.tabs-striped .tabs {
+    border-top : 1px solid #868686 !important;
+}
+
+.tabs-striped.tabs-color-positive .tab-item {
+
+    color : rgba(134, 134, 134, 0.8);
+}
+
+.tabs-striped.tabs-color-positive .tab-item.activated, .tabs-striped.tabs-color-positive .tab-item.active, .tabs-striped.tabs-color-positive .tab-item.tab-item-active {
+    border-top-width : 0;
+    margin-top       : 0;
+}
+
+input {
+    -webkit-user-select : auto;
+}
+
+.introSilde {
+    height : 100%;
+}
+
+.introSilde.introOff {
+    height : calc(100% - 44px);
+}
+
+.tabContent {
+    background-color    : #5EAEFB;
+    background-image    : url('../img/cloud-background.png');
+    background-repeat   : no-repeat;
+    background-size     : 100%;
+    background-position : bottom left;
+
+}
+
+div.inputBoxDiv {
+    background-color    : transparent;
+    border              : none;
+    background-image    : url('../img/inputBox.png');
+    background-position : center center;
+    background-repeat   : no-repeat;
+    background-size     : contain;
+    height              : 36px;
+    padding             : 0;
+}
+
+label.inputBoxLabel {
+    background-color : transparent;
+    margin-right     : 5px;
+}
+
+select.suffixSelect {
+    border           : none;
+    color            : #ADADAD;
+    background-color : transparent;
+    height           : 31px
+}
+
+div.inputDiv {
+    margin-bottom : 0;
+    margin-top    : 5px;
+}
+
+.resultScroll {
+    opacity            : 0.9;
+    height             : 320px;
+    width              : 300px;
+    position           : absolute;
+    left               : 10px;
+    margin-top         : 10px;
+    box-shadow         : 5px -2px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transition : transform ease-out 0.5s;
+    transition         : transform ease-out 0.5s;
+    transform          : scale(1, 1);
+    -ms-transform      : scale(1, 1); /* IE 9 */
+    -moz-transform     : scale(1, 1); /* Firefox */
+    -webkit-transform  : scale(1, 1); /* Safari and Chrome */
+    -o-transform       : scale(1, 1); /* Opera */
+}
+
+.resultScroll.ng-hide {
+    transform         : scale(0, 0);
+    -ms-transform     : scale(0, 0); /* IE 9 */
+    -moz-transform    : scale(0, 0); /* Firefox */
+    -webkit-transform : scale(0, 0); /* Safari and Chrome */
+    -o-transform      : scale(0, 0); /* Opera */
+}
+
+.whoisDiv {
+    opacity            : 0.9;
+    height             : 320px;
+    width              : 300px;
+    position           : absolute;
+    margin-top         : 10px;
+    box-shadow         : 5px -2px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transition : transform ease-out 0.5s;
+    transition         : transform ease-out 0.5s;
+    transform          : scale(1, 1);
+    -ms-transform      : scale(1, 1); /* IE 9 */
+    -moz-transform     : scale(1, 1); /* Firefox */
+    -webkit-transform  : scale(1, 1); /* Safari and Chrome */
+    -o-transform       : scale(1, 1); /* Opera */
+}
+
+.whoisDiv.ng-hide {
+    transform         : scale(0, 0);
+    -ms-transform     : scale(0, 0); /* IE 9 */
+    -moz-transform    : scale(0, 0); /* Firefox */
+    -webkit-transform : scale(0, 0); /* Safari and Chrome */
+    -o-transform      : scale(0, 0); /* Opera */
+}
+
+.whoisInfoScroll {
+    height : 212px;
+}
+
+.searchInput {
+    margin-left  : 35px;
+    width        : 185px;
+    margin-right : 10px;
+    display      : -webkit-inline-box !important;
+
+}
+
+div.paySelectDiv {
+    opacity : 0.9;
+}
+
+div.paySelectDiv div.payItem {
+    padding : 0;
+    color   : #5F5F5F;
+}
+
+div.paySelectDiv img.payIcon {
+    width          : 35px;
+    height         : 35px;
+    margin         : 2px 2px 2px 15px;
+    vertical-align : middle;
+}
+
+div.paySelectDiv i.radioDef {
+    padding : 4px;
+}
+
+.searchButtonDiv {
+    background-image    : url('../img/search-button.png');
+    background-position : center center;
+    background-repeat   : no-repeat;
+    background-size     : contain;
+    height              : 38px;
+}
+
+.searchButton {
+    font-size        : 1.25em;
+    line-height      : 38px;
+    border           : none;
+    background-color : transparent !important;
+}
+
+.addIcon {
+    color : #5EAEFB;
+}
+
+.icon.addIcon:before {
+    font-size : 2em;
+}
+
+div.voiceDiv {
+    bottom              : 10px;
+    background-image    : url('../img/voice-button.png');
+    background-position : center center;
+    background-repeat   : no-repeat;
+    background-size     : contain;
+    padding             : 0;
+}
+
+a.voiceButton {
+    margin-left  : auto;
+    margin-right : auto;
+}
+
+div.cartBar {
+    background-color : rgba(94, 174, 251, 0.6);
+}
+
+.cartItem {
+    width : 60%;
+}
+
+i.miniIcon.icon {
+    font-size : 24px;
+}
+
+input[readonly].yearText {
+    position         : relative;
+    float            : right;
+    right            : 40px;;
+    width            : 25px;
+    background-color : #FFFFFF;
+}
+
+.deleteButton {
+    padding-top : 3px;
+}
+
+button.realTipIcon {
+    color : #FF5151 !important;
+}
+
+button.realTipIcon::before {
+    font-size   : 24px !important;
+    line-height : 24px !important;
+}
+
+p.realTip {
+    font-size   : 15px !important;
+    margin-left : 10px !important;
+    color       : #FF5151 !important;
+    text-align  : left !important;
+}
+
+button.realTipRight {
+    font-size        : 15px !important;
+    background-color : #5EAEFB !important;
+    border           : none;
+}
+
+.myInfoDiv {
+    margin-bottom    : 0;
+    background-color : #FFFFFF;
+    opacity          : 0.9;
+}
+
+.myLogoImg {
+    width            : 150px;
+    height           : 150px;
+    border-radius    : 50%;
+    overflow         : hidden;
+    background-color : #ADADAD;
+}
+
+.myBar {
+    background-color : rgba(211, 211, 211, 0.7);
+    z-index          : 15;
+    position         : relative;
+}
+
+.myDomainScroll {
+    height  : calc(100% - 135px);
+    padding : 0;
+    opacity : 0.9;
+}
+
+.myDomainItem {
+    height  : calc(100% - 38px);
+    padding : 0;
+}
+
+div.realnameFlag {
+    position    : absolute;
+    color       : #03FA21;
+    margin-left : -40px;
+    font-size   : 200%;
+}
+
+div.badgeDiv {
+    position : absolute;
+    display  : flex;
+    left     : 50%;
+}
+
+a.badgeSpan {
+    padding         : 3px;
+    width           : 16px;
+    height          : 16px;
+    font-size       : 12px;
+    line-height     : 10px;
+    text-decoration : none
+}
+
+.button.buttonPay {
+    border-color     : #F77F80;
+    background-color : #F77F80;
+}
+
+.payDivItem {
+    padding-right : 110px;
+}
+
+.cartScroll {
+    height       : 270px;
+    width        : 300px;
+    margin-left  : auto;
+    margin-right : auto;
+    margin-top   : 0;
+    opacity      : 0.9;
+}
+
+.payScroll {
+    height       : 250px;
+    width        : 300px;
+    margin-left  : auto;
+    margin-right : auto;
+    margin-top   : 0;
+    opacity      : 0.9;
+}
+
+.domainItem {
+    padding-right : 16px;
+}
+
+.chartDiv {
+    height       : 250px;
+    width        : 300px;
+    margin-left  : auto;
+    margin-right : auto;
+    margin-top   : 30px;
+    box-shadow   : 2px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+img.captureImg {
+    width            : 100px;
+    height           : 100px;
+    border-radius    : 50%;
+    overflow         : hidden;
+    background-color : #ADADAD;
+    margin-left      : calc(50% - 50px);
+}
